@@ -1,20 +1,28 @@
-// let arr = [
-//     {
-//         id:1,
-//         card: "visa", 
-//         cash: "rub"
-//     },
-//     {
-//         id:2,
-//         card: "visa", 
-//         cash: "rub"
-//     },
-//     {
-//         id:3,
-//         card: "visa", 
-//         cash: "rub"
-//     }
-// ]
+let arr = [
+    {
+        id:1,
+        card: "visa", 
+        cash: "rub"
+    },
+    {
+        id:2,
+        card: "visa", 
+        cash: "rub"
+    },
+    {
+        id:3,
+        card: "visa", 
+        cash: "rub"
+    }
+]
+
+// let h1 = document.querySelector('h1')
+// let user_email = document.querySelector('.user_email')
+// let all_wallets = document.querySelector('.all_wallets')
+// h1.innerHTML = `Добро пожаловать, ${}`
+// user_email.innerHTML = `${}`
+
+
 
 let wallets = document.querySelector('.wallets')
 
