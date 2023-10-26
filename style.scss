@@ -1,0 +1,28 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    height: 70px;
+    margin: 0 auto;
+    background-color: #F0F0F0;
+
+    nav {
+        display: flex;
+        gap: 21px;
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+    }
+
+    div {
+        display: flex;
+        gap: 19px;
+
+        button {
+            border: 0;
+        }
+    }
+}
