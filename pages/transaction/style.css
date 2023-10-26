@@ -4,14 +4,14 @@
   box-sizing: border-box;
 }
 .transaction h2 {
-    font-size: 40px;
-    font-weight: 500;
-    padding: 10px 0;
+  font-size: 40px;
+  font-weight: 500;
+  padding: 10px 0;
 }
-table {
+.transaction table {
   width: 100%;
 }
-table thead tr th {
+.transaction table thead tr th {
   font-size: 18px;
   font-weight: 700;
   color: gray;
@@ -19,10 +19,11 @@ table thead tr th {
   text-align: left;
 }
 
-table tbody tr {
+.transaction table tbody tr {
   position: relative;
 }
-table tbody tr::after {
+
+.transaction table tbody tr::after {
   content: "";
   display: block;
   width: 100%;
@@ -31,7 +32,7 @@ table tbody tr::after {
   position: absolute;
   left: 0;
 }
-table tbody tr td {
+.transaction table tbody tr td {
   text-align: left;
   font-size: 15px;
   font-weight: 600;
