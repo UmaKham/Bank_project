@@ -1,4 +1,5 @@
-import axios from 'https://cdn.jsdelivr.net/npm/axios@1.6.0/+esm'
+import axios from 'axios'
+
 let inp_email = document.querySelector('.email')
 let inp_password = document.querySelector('.password')
 let enter = document.querySelector('.enter')
