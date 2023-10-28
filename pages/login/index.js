@@ -1,33 +1,42 @@
 import axios from 'axios'
+import {
+    getData
+} from '../../modules/helpers';
 
-let inp_email = document.querySelector('.email')
-let inp_password = document.querySelector('.password')
-let enter = document.querySelector('.enter')
+
 let form = document.forms.login
 
 form.onsubmit = (e) => {
     e.preventDefault();
-    
 
-    axios.get('http://localhost:8080/users?email=' + inp_email.value)
-        .then(res => {
-            if(res.status == 200 || res.status == 201) {
-                axios.get('http://localhost:8080/users?password=' + inp_password.value)
-                .then(res => {
-                    if(res.status == 200 || res.status == 201) {
-                        location.assign('/index.html/')
-                    }else{
-                        alert('Неверный пароль')
-                    }
-                })
-            } else{
-                alert('Пользователь не найден')
-            }
+    let user = {}
 
+    let fm = new FormData(form)
+
+    fm.forEach((value, key) => {
+        user[key] = value
     })
 
-}
 
-enter.onclick = () => {
-    location.assign('/pages/signup/')
+    getData('/users?email=' + user.email)
+        .then(res => {
+            if(!res) return
+            if (res.status !== 200 && res.status !== 201) return
+            if (res.data.length === 0) {
+                alert('not found')
+                return
+            }
+
+            let [res_user] = res.data
+
+            if (+res_user.password === +user.password) {
+
+                delete res_user.password
+
+                localStorage.setItem('user', JSON.stringify(res_user))
+                location.assign('/')
+            } else {
+                alert('wrong password')
+            }
+        })
 }

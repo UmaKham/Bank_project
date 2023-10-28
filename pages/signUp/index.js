@@ -1,4 +1,5 @@
-import axios from 'https://cdn.jsdelivr.net/npm/axios@1.6.0/+esm'
+import axios from 'axios'
+import { getData, postData } from '../../modules/helpers';
 let form = document.forms.signup
 
 form.onsubmit = (e) => {
@@ -12,8 +13,7 @@ form.onsubmit = (e) => {
         user[key] = value
     })
 
-
-    axios.get('http://localhost:8080/users?email=' + user.email)
+    getData('/users?email=' + user.email)
         .then(res => {
             if(res.status !== 200 && res.status !== 201) return 
             if(res.data.length > 0) {
@@ -21,11 +21,11 @@ form.onsubmit = (e) => {
                 return
             } 
 
-            axios.post('http://localhost:8080/users', user)
+            postData('/users', user)
                 .then(res => {
                     if(res.status === 200 || res.status === 201)  {
                         location.assign('/pages/login/')
-                    }
+                    }   
 
                 })
         })
