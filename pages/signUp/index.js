@@ -1,6 +1,7 @@
 import axios from "axios";
 
 let form = document.forms.signup;
+let enter = document.querySelector('.enter')
 
 form.onsubmit = (e) => {
     e.preventDefault();
@@ -26,4 +27,9 @@ form.onsubmit = (e) => {
         }
         });
     });
+};
+
+enter.onclick = (e) => {
+    e.preventDefault()
+    location.assign("/pages/login/");
 };

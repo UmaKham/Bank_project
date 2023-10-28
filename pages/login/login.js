@@ -1,8 +1,8 @@
 import axios from "axios";
-let inp_email = document.querySelector(".email");
-let inp_password = document.querySelector(".password");
-let enter = document.querySelector(".enter");
+
 let form = document.forms.login;
+
+let inpPassword = document.querySelector(".password");
 
 form.onsubmit = (e) => {
   e.preventDefault();
@@ -12,18 +12,14 @@ form.onsubmit = (e) => {
       axios
         .get("http://localhost:8080/users?password=" + user.password)
         .then((res) => {
-          if (res.data.password == inp_password) {
+          if (res.data.password == inpPassword) {
             location.assign("/index.html/");
           } else {
-            alert("Неверный пароль");
+            alert("False password");
           }
         });
     } else {
-      alert("Пользователь не найден");
+      alert("User doesn't find");
     }
   });
-};
-
-enter.onclick = () => {
-  location.assign("/pages/signup/");
 };
