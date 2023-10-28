@@ -1,4 +1,5 @@
-import axios from 'axios'
+import axios from "axios"
+
 let form = document.forms.signup
 
 form.onsubmit = (e) => {
@@ -13,22 +14,22 @@ form.onsubmit = (e) => {
     })
 
 
-    axios.get('http://localhost:8080/users?email=' + user.email)
-        .then(res => {
-            if(res.status !== 200 && res.status !== 201) return 
-            if(res.data.length > 0) {
-                alert('account already taken!')
-                return
-            } 
+    // axios.get('http://localhost:8080/users?email=' + user.email)
+    //     .then(res => {
+    //         if(res.status !== 200 && res.status !== 201) return 
+    //         if(res.data.length > 0) {
+    //             alert('account already taken!')
+    //             return
+    //         } 
 
-            axios.post('http://localhost:8080/users', user)
-                .then(res => {
-                    if(res.status === 200 || res.status === 201)  {
-                        location.assign('/pages/login/')
-                    }
+    //         axios.post('http://localhost:8080/users', user)
+    //             .then(res => {
+    //                 if(res.status === 200 || res.status === 201)  {
+    //                     location.assign('/pages/login/')
+    //                 }
 
-                })
-        })
-
+    //             })
+    //     })
+        
 
 }
