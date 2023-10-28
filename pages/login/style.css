@@ -50,6 +50,11 @@
     border-radius: 10px;
     background: #0047FF;
     border: none;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    cursor: pointer;
 }
 
 .box .btn p {
@@ -71,4 +76,13 @@
     line-height: normal;
     text-decoration: none;
     margin-top: 32px;
+}
+
+.error{
+    color: red;
+    font-weight: bold;
+}
+
+.hide{
+    display: none;
 }

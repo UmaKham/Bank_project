@@ -34,6 +34,13 @@
       "surname": "Adams",
       "password": "9999",
       "id": 5
+    },
+    {
+      "email": "uma.kham94@gmail.com",
+      "name": "Uma",
+      "surname": "ulmas@gmail.com",
+      "password": "1234",
+      "id": 6
     }
   ],
   "wallets": [],
