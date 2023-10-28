@@ -1,5 +1,5 @@
 import axios from "axios";
-// let inp_email = document.querySelector(".email");
+let inp_email = document.querySelector(".email");
 let inp_password = document.querySelector(".password");
 let enter = document.querySelector(".enter");
 let form = document.forms.login;
