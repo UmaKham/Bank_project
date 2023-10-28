@@ -1,4 +1,4 @@
-import axios from 'axios'
+import axios from 'https://cdn.jsdelivr.net/npm/axios@1.6.0/+esm'
 let inp_email = document.querySelector('.email')
 let inp_password = document.querySelector('.password')
 let enter = document.querySelector('.enter')
@@ -8,55 +8,25 @@ form.onsubmit = (e) => {
     e.preventDefault();
     
 
-    axios.get('http://localhost:8080/users?email=' + user.email)
+    axios.get('http://localhost:8080/users?email=' + inp_email.value)
         .then(res => {
             if(res.status == 200 || res.status == 201) {
-                axios.get('http://localhost:8080/users?password=' + user.password)
+                axios.get('http://localhost:8080/users?password=' + inp_password.value)
                 .then(res => {
-                    if(res.data.password == inp_password) {
+                    if(res.status == 200 || res.status == 201) {
                         location.assign('/index.html/')
                     }else{
                         alert('Неверный пароль')
                     }
                 })
-            }else{
+            } else{
                 alert('Пользователь не найден')
             }
 
     })
+
 }
 
 enter.onclick = () => {
     location.assign('/pages/signup/')
 }
-
-
-
-
-
-
-
-
-// let user = {}
-
-    // let fm = new FormData(form)
-
-    // fm.forEach((value, key) => {
-    //     user[key] = value
-    // })
-
-
-
-  
-
-//             axios.post('http://localhost:8080/users', user)
-//                 .then(res => {
-//                     if(res.status === 200 || res.status === 201)  {
-//                         location.assign('/pages/login/')
-//                     }
-
-//                 })
-//         })
-
-
-// }

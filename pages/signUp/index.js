@@ -1,4 +1,4 @@
-import axios from 'axios'
+import axios from 'https://cdn.jsdelivr.net/npm/axios@1.6.0/+esm'
 let form = document.forms.signup
 
 form.onsubmit = (e) => {
