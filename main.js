@@ -1,4 +1,4 @@
-import { header_create } from "./modules/ui";
+import { header_create } from "./modules/ui.js";
 
 header_create()
 

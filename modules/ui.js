@@ -67,7 +67,7 @@ export function header_create(user) {
     main_page.innerHTML = "Главная";
     my_wallets.innerHTML = "Мои кошельки";
     my_transactions.innerHTML = "Мои транзакции";
-    img.src = "./imgs/log-out (1) 1.svg";
+    // img.src = "./imgs/log-out (1) 1.svg";
     p.classList.add("user_email");
     p.innerHTML = "alex@gmail.com"
 
