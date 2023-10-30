@@ -1,5 +1,41 @@
 {
-  "users": [],
+  "users": [
+    {
+      "email": "dsarifkulo021@gmail.com",
+      "name": "Daler",
+      "surname": "Sharifkulov",
+      "password": "1234",
+      "id": 2
+    },
+    {
+      "email": "admin@gmail.com",
+      "name": "Daler",
+      "surname": "Sharifkulov",
+      "password": "1234",
+      "id": 3
+    },
+    {
+      "email": "dsarifkulo021@gmail.com",
+      "name": "Daler",
+      "surname": "Sharifkulov",
+      "password": "1234",
+      "id": 1
+    },
+    {
+      "email": "alex@gmail.com",
+      "name": "Alex",
+      "surname": "Adams",
+      "password": "0000",
+      "id": 4
+    },
+    {
+      "email": "ulmas@gmail.com",
+      "name": "Ulmas",
+      "surname": "Adams",
+      "password": "9999",
+      "id": 5
+    }
+  ],
   "wallets": [],
   "transactions": []
 }

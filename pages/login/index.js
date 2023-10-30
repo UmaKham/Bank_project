@@ -1,4 +1,4 @@
-// import axios from 'axios';
+import axios from 'axios';
 import { getData } from '../../modules/helpers';
 
 let form = document.forms.login;
@@ -29,11 +29,6 @@ form.onsubmit = (e) => {
                 delete res_user.password;
                 localStorage.setItem('user', JSON.stringify(res_user));
                 location.assign('/');
-
-                //1 
-                let fullName = res_user.firstName + ' ' + res_user.lastName;
-                document.getElementById('username').textContent = fullName;
-
             } else {
                 alert('wrong password');
             }

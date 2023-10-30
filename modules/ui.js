@@ -2,6 +2,7 @@ export function reload(arr, place) {
     place.innerHTML = "";
 
     let wallet_color = 1
+    
 
     for (let item of arr) {
         let box = document.createElement('div')
@@ -67,13 +68,19 @@ export function header_create(user) {
     main_page.innerHTML = "Главная";
     my_wallets.innerHTML = "Мои кошельки";
     my_transactions.innerHTML = "Мои транзакции";
-    img.src = "./imgs/log-out (1) 1.svg";
+    img.src = "log-out (1) 1 (1).png";
     p.classList.add("user_email");
-    p.innerHTML = "alex@gmail.com"
+    p.innerHTML = "@gmail.com"
+
+    button.addEventListener("click", logout);
 
     document.body.prepend(header);
     header.append(nav, div);
     nav.append(main_page, my_wallets, my_transactions);
     div.append(p, button);
     button.append(img);
+
+    function logout() {
+        window.location.href = "./pages/signUp/index.html";
+    }
 }

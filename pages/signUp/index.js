@@ -1,9 +1,6 @@
-// import axios from 'axios'
+import axios from 'axios'
 import { getData, postData } from "../../modules/helpers";
 let form = document.forms.signup
-
-
-alert("here")
 
 
 form.onsubmit = (e) => {
