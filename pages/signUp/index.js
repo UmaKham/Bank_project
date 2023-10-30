@@ -1,6 +1,10 @@
-import axios from 'axios'
-import { getData, postData } from '../../modules/helpers';
+// import axios from 'axios'
+import { getData, postData } from "../../modules/helpers";
 let form = document.forms.signup
+
+
+alert("here")
+
 
 form.onsubmit = (e) => {
     e.preventDefault();
@@ -29,6 +33,4 @@ form.onsubmit = (e) => {
 
                 })
         })
-
-
 }
