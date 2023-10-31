@@ -19,7 +19,8 @@ import { reload } from "./modules/ui.js";
 import axios from 'axios'
 import { getData } from './modules/helpers';
 
-getData('/wallets')
+
+getData('/wallets?user_id=' + user.id)
         .then(res => {
             reload(res.data, wallets)
         }
