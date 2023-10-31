@@ -14,6 +14,7 @@ form.onsubmit = (e) => {
   });
 
   getData("/users?email=" + user.email).then((res) => {
+    if(!res) return
     if (res.status !== 200 && res.status !== 201) return;
     if (res.data.length === 0) {
       alert("not found");
@@ -29,6 +30,6 @@ form.onsubmit = (e) => {
     } else {
         alert('wrong password')
     }
-    
+
   });
 };
