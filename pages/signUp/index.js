@@ -1,4 +1,3 @@
-
 import { getData, postData } from "../../modules/helpers";
 
 let form = document.forms.signup;
@@ -23,6 +22,8 @@ form.onsubmit = (e) => {
 
     postData("/users", user).then((res) => {
       if (res.status === 200 || res.status === 201) {
+        delete res_user.password;
+        localStorage.setItem("user", JSON.stringify(res_user));
         location.assign("/pages/login/");
       }
     });

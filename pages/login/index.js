@@ -1,13 +1,13 @@
-
+import { formToJSON } from "axios";
 import { getData } from "../../modules/helpers";
 
-let form = document.forms.login;
+let form = document.forms.login
 
 form.onsubmit = (e) => {
   e.preventDefault();
 
   let user = {};
-  let fm = new FormData(user);
+  let fm = new FormData(form)
   fm.forEach((value, key) => {
     user[key] = value;
   });
