@@ -22,10 +22,9 @@
 				<h4>Мои кошельки</h4>
 
 				<div class="wallets">
-					<!-- <div class="box">
-                        <h2>Visa</h2>
-                        <p>RUB</p>
-                    </div> -->
+					<div class="box box_add">
+						<span>+</span>
+					</div>
 				</div>
 
 				<p class="all_wallets">Смотреть все кошельки</p>
@@ -50,7 +49,31 @@
 			</div>
 		</div>
 
-
+		<form name="add_card">
+			<div class="form_bg hide">
+				<div class="form_card">
+					<label for="type">Тип карты:</label>
+					<select name="type" id="">
+						<option value="Visa">Visa</option>
+						<option value="Master Card">Master Card</option>
+						<option value="Maestro">Maestro</option>
+						<option value="UzCard">UzCard</option>
+						<option value="HUMO">HUMO</option>
+					</select>
+					<label for="currency">Валюта:</label>
+					<select name="currency" id="">
+						<option value="rub">RUB</option>
+						<option value="usd">USD</option>
+						<option value="sum">SUM</option>
+						<option value="euro">EURO</option>
+					</select>
+					<label for="number">Номер карты:</label>
+					<input type="number">
+					<button class="addCard_btn">Создать</button>
+					<button class="cancel">Отменить</button>
+				</div>
+			</div>
+		</form>
 
 
 	</section>

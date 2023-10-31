@@ -83,6 +83,8 @@ h1 {
     flex-shrink: 0;
     border-radius: 15px;
     padding: 19px 23px;
+    background-color: #0047FF;
+    cursor: pointer;
 }
 
 .bg_one {
@@ -164,4 +166,70 @@ table tbody tr td {
     font-weight: 600;
     color: black;
     padding: 10px;
+}
+
+.wallets .box_add{
+    background-color: rgba(128, 128, 128, 0.5);
+}
+
+.box_add span{
+    font-size: 100px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    color: grey;
+}
+
+.form_bg{
+    background-color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .form_card{
+        background-color: white;
+        width: 400px;
+        display: flex;
+        flex-direction: column;
+        padding: 40px;
+        font-size: 20px;
+
+        label{
+            margin: 15px 0;
+        }
+        input{
+            width: 98%;
+            height: 30px;
+            margin-bottom: 10px;
+        }
+        select{
+            width: 100%;
+            height: 30px;
+        }
+
+        button{
+            background-color: #0047FF;
+            margin: 10px 0;
+            width: 100%;
+            height: 50px;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 15px;
+            color: white;
+            cursor: pointer;
+        }
+    }
+}
+
+.hide{
+    display: none;
 }

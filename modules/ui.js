@@ -77,3 +77,20 @@ export function header_create(user) {
     div.append(p, button);
     button.append(img);
 }
+
+export function reload_card(card) {
+    let wallets = document.querySelector('.wallets')
+    
+    wallets.innerHTML = `Добро пожаловать, ${user.name}!`
+
+    
+    let card_box = document.createElement('div')
+    let type_card = document.createElement('h2')
+    let currency = document.createElement('p')
+
+    card_box.append(type_card, currency)
+    wallets.append(card_box)
+
+    card_box.classList.add('box')
+
+}
