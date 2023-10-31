@@ -1,4 +1,3 @@
-import axios from "axios";
 
 import { getData } from "../../modules/helpers";
 
@@ -13,7 +12,8 @@ form.onsubmit = (e) => {
     user[key] = value;
   });
 
-  getData("/users?email=" + user.email).then((res) => {
+  getData("/users?email=" + user.email)
+  .then((res) => {
     if(!res) return
     if (res.status !== 200 && res.status !== 201) return;
     if (res.data.length === 0) {
@@ -30,6 +30,5 @@ form.onsubmit = (e) => {
     } else {
         alert('wrong password')
     }
-
   });
 };
