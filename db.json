@@ -36,7 +36,6 @@
       "id": 5
     }
   ],
-
   "wallets": [
     {
       "name": "visa",
@@ -100,8 +99,14 @@
       "balance": "10000",
       "user_id": 5,
       "id": 9
+    },
+    {
+      "user_id": 2,
+      "currency": "RUB",
+      "name": "Daler",
+      "balance": "2222",
+      "id": 10
     }
   ],
-  
   "transactions": []
 }
