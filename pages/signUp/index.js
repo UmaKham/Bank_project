@@ -20,10 +20,11 @@ form.onsubmit = (e) => {
       return;
     }
 
-    postData("/users", user).then((res) => {
+    postData("/users", user)
+    .then((res) => {
       if (res.status === 200 || res.status === 201) {
-        delete res_user.password;
-        localStorage.setItem("user", JSON.stringify(res_user));
+        delete user.password;
+        localStorage.setItem("user", JSON.stringify(user));
         location.assign("/pages/login/");
       }
     });
