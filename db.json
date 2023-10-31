@@ -36,6 +36,27 @@
       "id": 5
     }
   ],
-  "wallets": [],
+
+  "wallets": [
+    {
+      "name": "visa",
+      "currency": "rub",
+      "balance": "10000",
+      "id": 1
+    },
+    {
+      "name": "visa",
+      "currency": "rub",
+      "balance": "10000",
+      "id": 2
+    },
+    {
+      "name": "visa",
+      "currency": "rub",
+      "balance": "10000",
+      "id": 3
+    }
+  ],
+  
   "transactions": []
 }

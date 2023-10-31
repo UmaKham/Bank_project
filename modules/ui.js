@@ -65,15 +65,18 @@ export function header_create(user) {
     let img = document.createElement("img");
 
     main_page.innerHTML = "Главная";
+    main_page.href = "/"
     my_wallets.innerHTML = "Мои кошельки";
+    my_wallets.href = "/pages/my_wallets/"
     my_transactions.innerHTML = "Мои транзакции";
     // img.src = "./imgs/log-out (1) 1.svg";
+    let user_local = JSON.parse(localStorage.getItem('user'))
     p.classList.add("user_email");
-    p.innerHTML = "alex@gmail.com"
+    p.innerHTML = user_local.email
 
     document.body.prepend(header);
     header.append(nav, div);
     nav.append(main_page, my_wallets, my_transactions);
     div.append(p, button);
     button.append(img);
-}
+} 

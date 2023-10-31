@@ -12,8 +12,15 @@ export const getData = async (resource) => {
         return null
     }
 }
-export const postData = async (resource, body) => {
-    const res = await axios.get(base_url + resource, body)
 
-    return res
+export const postData = async (resource, body) => {
+    try {
+        const res = await axios.get(base_url + resource, body)
+
+        return res
+    } catch(e) {
+        console.log(e);
+        return null
+    }
+    
 }

@@ -70,11 +70,9 @@ h1 {
 }
 
 .wallets {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 24px;
-
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 24px;
 }
 
 .wallets .box {

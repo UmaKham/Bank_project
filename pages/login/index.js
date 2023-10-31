@@ -27,6 +27,8 @@ form.onsubmit = (e) => {
                 return
             }
 
+            console.log(res);
+
             let [res_user] = res.data
 
             if (+res_user.password === +user.password) {
