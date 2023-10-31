@@ -4,11 +4,11 @@ import {getData} from '../../modules/helpers'
 let form = document.forms.add
 
 form.onsubmit = (e) => {
-    e.preventDefault();
+	e.preventDefault();
 
-    let user = {}
+	let user = {}
 
-    let fm = new FormData(form)
+	let fm = new FormData(form)
 
     fm.forEach((value, key) => {
         user[key] = value
@@ -38,3 +38,11 @@ form.onsubmit = (e) => {
         })
             }
 
+			let [res_user] = res.data
+
+			if(res_user.password === user.password) {
+				alert('welcome')
+				location.assign('/')
+			} else {
+				alert('wrong password')
+			}
