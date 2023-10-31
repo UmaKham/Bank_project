@@ -1,35 +1,30 @@
 import axios from "axios";
+import { getData, postData } from "../../modules/helpers";
 
 let form = document.forms.signup;
-let enter = document.querySelector('.enter')
 
 form.onsubmit = (e) => {
-    e.preventDefault();
+  e.preventDefault();
 
-    let user = {};
+  let user = {};
 
-    let fm = new FormData(form);
+  let fm = new FormData(form);
 
-    fm.forEach((value, key) => {
-        user[key] = value;
+  fm.forEach((value, key) => {
+    user[key] = value;
+  });
+
+  getData("/users?email=" + user.email).then((res) => {
+    if (res.status !== 200 && res.status !== 201) return;
+    if (res.data.length > 0) {
+      alert("account already taken!");
+      return;
+    }
+
+    postData("/users", user).then((res) => {
+      if (res.status === 200 || res.status === 201) {
+        location.assign("/pages/login/");
+      }
     });
-
-    axios.get("http://localhost:8080/users?email=" + user.email).then((res) => {
-        if (res.status !== 200 && res.status !== 201) return;
-        if (res.data.length > 0) {
-        alert("account already taken!");
-        return;
-        }
-
-        axios.post("http://localhost:8080/users", user).then((res) => {
-        if (res.status === 200 || res.status === 201) {
-            location.assign("/pages/login/");
-        }
-        });
-    });
-};
-
-enter.onclick = (e) => {
-    e.preventDefault()
-    location.assign("/pages/login/");
+  });
 };
