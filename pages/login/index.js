@@ -1,7 +1,7 @@
 import axios from 'axios'
+import {getData} from '../../modules/helpers'
+
 let form = document.forms.add
-let pass = document.querySelector('.password')
-let error = document.querySelector('.error')
 
 form.onsubmit = (e) => {
     e.preventDefault();
@@ -12,20 +12,29 @@ form.onsubmit = (e) => {
 
     fm.forEach((value, key) => {
         user[key] = value
-        console.log(user);
     })
 
-    axios.get('http://localhost:8080/users?email=' + user.email)
-        .then((res) => {
-            if(res.status === 200 || res.status === 201) {
-                axios.get('http://localhost:8080/users?password=' + user.password)
-                    .then((res) => {
-                        if(res.data.password === pass.value) {
-                            location.assign('http://localhost:5173/')
-                            error.classList.add('hide')
-                        } 
-                    })
-                    }  
-                })
+    getData('/users?email=' + user.email) 
+        .then(res => {
+            if(!res) return
+            if(res.status !== 200 && res.status !== 201) return
+            if(res.data.length === 0) {
+                alert('Not found')
+                return
+            } 
+
+            let [res_user] = res.data
+
+            if(res_user.password === user.password) {
+
+                delete res_user.password
+
+                localStorage.setItem('user', JSON.stringify(res_user))
+
+                location.assign('/')
+            } else {
+                alert('Wrong password')
+            }
+        })
             }
 
