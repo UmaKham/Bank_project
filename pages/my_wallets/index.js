@@ -29,11 +29,3 @@ btn_add_wallet.onclick = () =>{
 
 let user = JSON.parse(localStorage.getItem('user'))
 p_user_email.innerHTML = user.email
-console.log();
-
-// axios.get("http://localhost:8080/users")
-//     .then(res => {
-//         if(res.status == 200 ||res.status ==200){
-//             console.log(res);
-//         }
-//     })
