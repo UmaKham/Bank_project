@@ -1,4 +1,4 @@
-const user = localStorage.getItem('user') || null
+import { user } from "./user"
 
 if(!user) {
     location.assign('/pages/login/')
