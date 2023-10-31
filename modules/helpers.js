@@ -35,3 +35,25 @@ export const editData = async (resource, body) => {
     }
     
 }
+
+
+export const getSymbols = async () => {
+    const res = JSON.parse(localStorage.getItem('symbols'))
+
+    if(res) {
+        return res
+    } 
+
+    try {
+        const res = await axios.get('https://api.apilayer.com/fixer/symbols', {
+            headers: {
+                apikey: import.meta.env.VITE_API_KEY
+            }
+        })
+
+        localStorage.setItem('symbols', JSON.stringify(res.data.symbols))
+        return res.data.symbols
+    } catch (e) {
+        console.log(e);
+    }
+}

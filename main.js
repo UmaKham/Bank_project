@@ -1,7 +1,15 @@
-import { header_create } from "./modules/ui.js";
-import { user } from './modules/user.js'
-import { reload } from "./modules/ui.js";
-import { getData } from './modules/helpers';
+import {
+    header_create
+} from "./modules/ui.js";
+import {
+    user
+} from './modules/user.js'
+import {
+    reload
+} from "./modules/ui.js";
+import {
+    getData
+} from './modules/helpers';
 
 header_create()
 
@@ -17,10 +25,10 @@ user_email_body.innerHTML = `${user.email}`
 
 
 getData('/wallets?user_id=' + user.id)
-        .then(res => {
-            reload(res.data, wallets)
-        }
-)
+    .then(res => {
+        reload(res.data, wallets)
+    })
+
 
 all_wallets.onclick = () => {
     location.assign('/pages/my_wallets/')
