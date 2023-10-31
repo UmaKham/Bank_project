@@ -4,7 +4,7 @@ header_create()
 
 let wallets = document.querySelector('.wallets')
 let p_user_email = document.querySelector('.p_user_email')
-// let body_user_email = document.querySelector('.body_user_email')
+let btn_add_wallet = document.querySelector('.add_wallet')
 
 
 import { reload } from "../../modules/ui";
@@ -17,14 +17,16 @@ getData('/wallets')
         .then(res => {
             reload(res.data, wallets)
         }
-        )
+)
+
+btn_add_wallet.onclick = () =>{
+    location.assign('/pages/addWallet/')
+}
 
         
-// getData('/users?email=' + )
-//     .then(res => {
-//     console.log(res.data);
-// }
-// )
+
+
+
 let user = JSON.parse(localStorage.getItem('user'))
 p_user_email.innerHTML = user.email
 console.log();

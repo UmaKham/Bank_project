@@ -3,3 +3,12 @@
     display: flex;
     gap: 20px;
 }
+
+.add_wallet{
+width: 438px;
+height: 56px;
+border-radius: 10px;
+background: #0047FF;
+color: white;
+margin-top: 44px;
+}
