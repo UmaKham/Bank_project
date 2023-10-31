@@ -36,6 +36,77 @@
       "id": 5
     }
   ],
-  "wallets": [],
+  "wallets": [
+    {
+      "name": "visa",
+      "currency": "rub",
+      "balance": "10000",
+      "user_id": 1,
+      "id": 1
+    },
+    {
+      "name": "visa",
+      "currency": "rub",
+      "balance": "10000",
+      "user_id": 1,
+      "id": 2
+    },
+    {
+      "name": "visa",
+      "currency": "rub",
+      "balance": "10000",
+      "user_id": 2,
+      "id": 3
+    },
+    {
+      "name": "visa",
+      "currency": "rub",
+      "balance": "10000",
+      "user_id": 2,
+      "id": 4
+    },
+    {
+      "name": "visa",
+      "currency": "rub",
+      "balance": "10000",
+      "user_id": 2,
+      "id": 5
+    },
+    {
+      "name": "visa",
+      "currency": "rub",
+      "balance": "10000",
+      "user_id": "2",
+      "id": 6
+    },
+    {
+      "name": "visa",
+      "currency": "rub",
+      "balance": "10000",
+      "user_id": 4,
+      "id": 7
+    },
+    {
+      "name": "visa",
+      "currency": "rub",
+      "balance": "10000",
+      "user_id": 4,
+      "id": 8
+    },
+    {
+      "name": "visa",
+      "currency": "rub",
+      "balance": "10000",
+      "user_id": 5,
+      "id": 9
+    },
+    {
+      "user_id": 2,
+      "currency": "RUB",
+      "name": "Daler",
+      "balance": "2222",
+      "id": 10
+    }
+  ],
   "transactions": []
 }
