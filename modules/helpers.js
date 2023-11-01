@@ -12,8 +12,48 @@ export const getData = async (resource) => {
         return null
     }
 }
-export const postData = async (resource, body) => {
-    const res = await axios.get(base_url + resource, body)
 
-    return res
+export const postData = async (resource, body) => {
+    try {
+        const res = await axios.post(base_url + resource, body)
+
+        return res
+    } catch(e) {
+        console.log(e);
+        return null
+    }
+    
+}
+export const editData = async (resource, body) => {
+    try {
+        const res = await axios.patch(base_url + resource, body)
+
+        return res
+    } catch(e) {
+        console.log(e);
+        return null
+    }
+    
+}
+
+
+export const getSymbols = async () => {
+    const res = JSON.parse(localStorage.getItem('symbols'))
+
+    if(res) {
+        return res
+    } 
+
+    try {
+        const res = await axios.get('https://api.apilayer.com/fixer/symbols', {
+            headers: {
+                apikey: import.meta.env.VITE_API_KEY
+            }
+        })
+
+        localStorage.setItem('symbols', JSON.stringify(res.data.symbols))
+        return res.data.symbols
+    } catch (e) {
+        console.log(e);
+    }
 }
