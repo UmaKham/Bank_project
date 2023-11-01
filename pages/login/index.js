@@ -1,7 +1,11 @@
 import axios from 'axios'
 import {
     getData
+<<<<<<< HEAD
 } from '../../modules/helpers';
+=======
+} from '../../modules/helpers'
+>>>>>>> 9fa1f043871383a9ffa845a3aa41b2b004fd96da
 
 
 let form = document.forms.login
@@ -17,21 +21,18 @@ form.onsubmit = (e) => {
         user[key] = value
     })
 
-
     getData('/users?email=' + user.email)
         .then(res => {
-            if(!res) return
+            if (!res) return
             if (res.status !== 200 && res.status !== 201) return
             if (res.data.length === 0) {
-                alert('not found')
+                alert('Not found')
                 return
             }
 
-            console.log(res);
-
             let [res_user] = res.data
 
-            if (+res_user.password === +user.password) {
+            if (res_user.password === user.password) {
 
                 delete res_user.password
 

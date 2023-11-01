@@ -1,5 +1,5 @@
 import { user } from "./user"
 
 if(!user) {
-    location.assign('/pages/login/')
+  location.assign('/pages/signup/')
 }
