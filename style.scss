@@ -1,8 +1,13 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: sans-serif !important;
+}
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 90%;
     max-width: 1920px;
     height: 70px;
     margin: 0 auto;
@@ -33,6 +38,12 @@ header {
     width: 90%;
     max-width: 1920px;
     margin: 0 auto;
+}
+
+header .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 h1 {
@@ -70,11 +81,9 @@ h1 {
 }
 
 .wallets {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 24px;
-
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 24px;
 }
 
 .wallets .box {

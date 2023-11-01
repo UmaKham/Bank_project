@@ -24,8 +24,8 @@ export function reload(arr, place) {
             wallet_color = 1
         }
 
-        h2.innerHTML = "Visa"
-        p.innerHTML = "RUB"
+        h2.innerHTML = item.name.toUpperCase()
+        p.innerHTML = item.currency.toUpperCase()
 
         place.append(box)
         box.append(h2, p)
@@ -55,6 +55,7 @@ export function table_reload(arr, place) {
 
 export function header_create(user) {
     let header = document.createElement("header");
+    let container = document.createElement('div')
     let nav = document.createElement("nav");
     let main_page = document.createElement("a");
     let my_wallets = document.createElement("a");
@@ -64,33 +65,31 @@ export function header_create(user) {
     let button = document.createElement("button");
     let img = document.createElement("img");
 
+    container.classList.add('container')
     main_page.innerHTML = "Главная";
+    main_page.href = "/"
     my_wallets.innerHTML = "Мои кошельки";
+    my_wallets.href = "/pages/my_wallets/"
     my_transactions.innerHTML = "Мои транзакции";
-    img.src = "./imgs/log-out (1) 1.svg";
+    img.src = "./img/log-out (1) 1.png";
+    let user_local = JSON.parse(localStorage.getItem('user'))
     p.classList.add("user_email");
-    p.innerHTML = "alex@gmail.com"
+    p.innerHTML = user_local.email
 
     document.body.prepend(header);
-    header.append(nav, div);
+    header.append(container);
+    container.append(nav, div)
     nav.append(main_page, my_wallets, my_transactions);
     div.append(p, button);
     button.append(img);
-}
 
-export function reload_card(card) {
-    let wallets = document.querySelector('.wallets')
+    img.onclick = () => {
+        let ask = confirm('Вы действительно хотите выйти?')
+
+        if(ask){
+            localStorage.clear()
+            location.assign('/pages/login/')
+        }
+    }
     
-    wallets.innerHTML = `Добро пожаловать, ${user.name}!`
-
-    
-    let card_box = document.createElement('div')
-    let type_card = document.createElement('h2')
-    let currency = document.createElement('p')
-
-    card_box.append(type_card, currency)
-    wallets.append(card_box)
-
-    card_box.classList.add('box')
-
-}
+} 

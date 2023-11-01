@@ -9,12 +9,14 @@
 <body>
     
     <div class="container">
-        <form class="box">
+        <form name="add_wallet" class="box">
             <p class="title">Добавить кошелек</p>
 
             <div class="inputs">
-                <input type="text" placeholder="Имя">
-                <input type="number" placeholder="Валюта">
+                <input type="text" name="name" placeholder="Имя">
+                <input type="number" name="balance" placeholder="Баланс">
+                <select name="currency" id="currency"></select>
+                <!-- <input type="text" name="currency" placeholder="Валюта">/ -->
             </div>
 
 
@@ -22,3 +24,7 @@
 
         </form>
     </div>
+
+    <script type="module" src="./index.js"></script>
+
+</body>
