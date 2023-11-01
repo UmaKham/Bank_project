@@ -1,11 +1,7 @@
 import axios from 'axios'
 import {
     getData
-<<<<<<< HEAD
-} from '../../modules/helpers';
-=======
 } from '../../modules/helpers'
->>>>>>> 9fa1f043871383a9ffa845a3aa41b2b004fd96da
 
 
 let form = document.forms.login
