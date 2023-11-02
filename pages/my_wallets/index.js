@@ -8,7 +8,6 @@ let btn_add_wallet = document.querySelector('.add_wallet')
 
 
 import { reload } from "../../modules/ui";
-import axios from 'axios'
 import { getData } from '../../modules/helpers';
 
 let user = JSON.parse(localStorage.getItem('user'))
@@ -22,10 +21,4 @@ getData('/wallets?user_id=' + user.id)
 btn_add_wallet.onclick = () =>{
     location.assign('/pages/addWallet/')
 }
-
-        
-
-
-
-
 p_user_email.innerHTML = user.email

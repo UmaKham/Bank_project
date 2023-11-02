@@ -8,6 +8,9 @@ form.onsubmit = (e) => {
   let user = {};
 
   let fm = new FormData(form);
+  fm.forEach((value, key) => {
+    user[key] = value;
+  });
 
   getData("/users?email=" + user.email).then((res) => {
     if (res.status !== 200 && res.status !== 201) return;

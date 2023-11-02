@@ -34,6 +34,13 @@
       "surname": "Adams",
       "password": "9999",
       "id": 5
+    },
+    {
+      "email": "tursunovmunis141@gmail.com",
+      "name": "Munis",
+      "surname": "Tursunov",
+      "password": "9669",
+      "id": 6
     }
   ],
   "wallets": [
