@@ -32,28 +32,45 @@ form.onsubmit = (e) => {
   });
   getData("/wallets?user_id=" + user.id).then((res) => {
     res.data.forEach((card) => {
-      let options = selectWallets.querySelectorAll("option");
-      options.forEach((option) => {
-        if (card.name === option.innerHTML) {
-          if (card.balance - sum.value <= 0) {
-            alert("Not enough money for transaction");
-            // return
-          } else {
-            // let total = card.balance - sum.value;
-            // getData("/wallets?name=" + card.name).then(() => {
-            //   editData("/wallets", { balance: total }).then(() => {
-            //     postData("/transactions", transaction).then((res) => {
-            //       if (res.status === 200 || res.status === 201) {
-            //         location.assign("/pages/my_transactions/");
-            //       } else {
-            //         alert(`Smth went wrong. Please try again - ${user.name}`);
-            //       }
-            //     });
-            //   });
-            // });
-          }
+      if (card.name === transaction.wallet) {
+        if (card.balance - transaction.sum < 0) {
+          alert("Not enough money for transaction");
+        } else {
+          let total = card.balance - transaction.sum;
+          console.log(total);
+          editData(`/wallets?id=${card.id}`, { balance: total })
+          .then((res) => {
+            if (res.status === 200 || res.status === 201) {
+              console.log(card);
+              postData("/transactions", transaction).then((res) => {
+                if (res.status === 200 || res.status === 201) {
+                  location.assign("/pages/my_transactions/");
+                } else {
+                  alert(`Smth went wrong. Please try again - ${user.name}`);
+                }
+              });
+            }
+          });
         }
-      });
+      }
     });
   });
 };
+// res.data.forEach((card) => {
+//   let options = selectWallets.querySelectorAll("option");
+//   options.forEach((option) => {
+//     if (card.name === option.innerHTML) {
+//       if (card.balance - sum.value <= 0) {
+//
+//         // return
+//       } else {
+//         let total = card.balance - sum.value;
+//         getData("/wallets?name=" + card.name).then(() => {
+//           editData("/wallets", { balance: total }).then(() => {
+//
+//           });
+//         });
+//       }
+//     }
+//   });
+// });

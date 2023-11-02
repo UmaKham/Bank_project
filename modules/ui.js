@@ -29,6 +29,10 @@ export function reload(arr, place) {
 
         place.append(box)
         box.append(h2, p)
+
+        box.onclick = () => {
+            location.assign('/pages/aboutWallet/')
+        }
     }
 }
 
