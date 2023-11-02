@@ -78,6 +78,13 @@
       "name": "Uma Kham",
       "balance": "100000",
       "id": 4
+    },
+    {
+      "user_id": 7,
+      "currency": "USD",
+      "name": "HUMO",
+      "balance": "50000",
+      "id": 5
     }
   ],
   "transactions": []

@@ -6,9 +6,15 @@ export function reload(arr, place) {
     for (let item of arr) {
         let box = document.createElement('div')
         let h2 = document.createElement('h2')
+        let cash = document.createElement('span')
         let p = document.createElement('p')
 
         box.classList.add('box')
+        cash.classList.add('cash')
+
+        box.onclick = (e) => {
+            location.assign('/pages/cardInfo/')
+        }
 
         if (wallet_color == 1) {
             box.classList.add('bg_one')
@@ -25,10 +31,11 @@ export function reload(arr, place) {
         }
 
         h2.innerHTML = item.name.toUpperCase()
+        cash.innerHTML = item.balance
         p.innerHTML = item.currency.toUpperCase()
 
         place.append(box)
-        box.append(h2, p)
+        box.append(h2, cash, p)
     }
 }
 

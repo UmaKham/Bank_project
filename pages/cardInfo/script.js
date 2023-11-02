@@ -1,14 +1,17 @@
 import { getData } from "/modules/helpers";
+import { getSymbols } from "../../modules/helpers";
 import { header_create } from "/modules/ui"; 
-import { user } from "/modules/user";
-console.log(user);
+let local_user = JSON.parse(localStorage.getItem('user'))
 
-header_create(user)
-reload_card(user)
+header_create(local_user)
+reload_card(local_user)
 
-function reload_card(user) {
+
+function reload_card(local_user) {
+  
   let container = document.querySelector('main .container')
   container.innerHTML = ""
+
   //Card-box
   let card_box = document.createElement('div')
   let card_item = document.createElement('div')
@@ -54,25 +57,20 @@ function reload_card(user) {
   currency.classList.add('currency')
   
   converter.classList.add('converter')
+  convert_btn.classList.add('convert_btn')
   actual_currency.classList.add('actual_currency')
   
   chart_box.classList.add('chart_box')
   nav_chart.classList.add('nav_chart')
   chart_btnbox.classList.add('chart_btnbox')
-  btn_today.classList.add('active')
   chart.classList.add('chart')
 
   card_item.style='background: url(/public/img/card_bg.jpg); background-repeat: no-repeat; background-size: cover;'
   img_wallet.src='../../public/img/wallet.png'
   img_wallet.width='30'
-  converter.style='background: url(/public/img/card_bg2.jpg); background-repeat: no-repeat; background-size: cover;'
+  converter.style='background: url(/public/img/card_bg.jpg); background-repeat: no-repeat; background-size: cover;'
 
-  card_name.innerHTML = `${user.name} ${user.surname}`
-  cash.innerHTML = '10000'
-  currency.innerHTML = 'RUB'
-
-  actual_currency.innerHTML = 'RUB'
-  convert_btn.innerHTML = 'Convert'
+  convert_btn.innerHTML = 'convert'
 
   chart_title.innerHTML = 'Uma Kham unit chart'
   btn_today.innerHTML = 'Today'
@@ -80,6 +78,32 @@ function reload_card(user) {
   btn_month.innerHTML = 'Month'
   btn_year.innerHTML = 'Year'
 
+  let btn = chart_btnbox.querySelectorAll('button')
+  
+  btn.forEach(btn_add => {
+    btn_add.onclick = (e) => {
+      e.target.classList.add('active')
+    }
+  })
+
+  getData('/wallets?user_id=' + local_user.id)
+    .then(res => {
+      let [user_wallets] = res.data
+      card_name.innerHTML = user_wallets.name
+      cash.innerHTML = user_wallets.balance
+      currency.innerHTML = user_wallets.currency
+
+      actual_currency.innerHTML = `${user_wallets.currency} =>`
+    })
+
+    getSymbols()
+      .then(res => {
+          for (let key in res) {
+              let option = new Option(`${key} - ${res[key]}`, key)
+
+              select.append(option)
+          }
+      })
 }
 
-reload_card(user)
+reload_card(local_user)
