@@ -41,28 +41,35 @@
       "surname": "Tursunov",
       "password": "9669",
       "id": 6
+    },
+    {
+      "email": "tursunovmunis34@gmail.com",
+      "name": "Munis",
+      "surname": "Tursunov",
+      "password": "9669",
+      "id": 7
     }
   ],
   "wallets": [
     {
-      "user_id": 2,
-      "currency": "USD",
-      "name": "Mastercard",
-      "balance": "1000",
-      "id": 1
-    },
-    {
-      "user_id": 3,
-      "currency": "ANG",
+      "user_id": 6,
+      "currency": "UZS",
       "name": "Visa",
-      "balance": "100",
-      "id": 2
+      "balance": "1000000",
+      "id": 1
     },
     {
       "user_id": 6,
       "currency": "RUB",
-      "name": "Visa",
-      "balance": "5000000",
+      "name": "MasterCard",
+      "balance": "1000000",
+      "id": 2
+    },
+    {
+      "user_id": 6,
+      "currency": "UZS",
+      "name": "Humo",
+      "balance": "1000000",
       "id": 3
     }
   ],

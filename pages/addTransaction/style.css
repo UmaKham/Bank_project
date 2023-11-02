@@ -32,7 +32,7 @@
     align-items: center;
 }
 
-.inputs input {
+.inputs input, .inputs select {
     margin-bottom: 10px;
     width: 438px;
     height: 56px;

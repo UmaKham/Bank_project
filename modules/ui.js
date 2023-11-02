@@ -38,18 +38,18 @@ export function table_reload(arr, place) {
         let tr = document.createElement("tr");
         let id = document.createElement("td");
         let card = document.createElement("td");
-        let catelory = document.createElement("td");
+        let category = document.createElement("td");
         let sum = document.createElement("td");
         let time = document.createElement("td");
 
         id.innerHTML = item.id;
-        card.innerHTML = item.card;
-        catelory.innerHTML = item.catelories;
+        card.innerHTML = item.wallet;
+        category.innerHTML = item.category;
         sum.innerHTML = item.sum;
         time.innerHTML = item.time;
 
-        tBody.append(tr);
-        tr.append(id, card, catelory, sum, time);
+        place.append(tr);
+        tr.append(id, card, category, sum, time);
     }
 }
 

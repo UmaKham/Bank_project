@@ -1,4 +1,4 @@
-import { header_create } from "./modules/ui.js";
+import { header_create, table_reload } from "./modules/ui.js";
 import { user } from "./modules/user.js";
 import { reload } from "./modules/ui.js";
 import { getData } from "./modules/helpers";
@@ -16,4 +16,10 @@ user_email_body.innerHTML = `${user.email}`;
 
 getData("/wallets?user_id=" + user.id).then((res) => {
   reload(res.data, wallets);
+});
+
+let transactions = document.querySelector("tbody");
+
+getData("/transactions?user_id=" + user.id).then((res) => {
+  table_reload(res.data, transactions)
 });
