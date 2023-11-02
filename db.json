@@ -41,7 +41,7 @@
       "user_id": 2,
       "currency": "USD",
       "name": "Visa",
-      "balance": "100",
+      "balance": 60,
       "id": 1
     },
     {
@@ -68,21 +68,28 @@
   ],
   "transactions": [
     {
-      "user_id": 3,
-      "wallet_id": 2,
-      "time": "2023-10-2-13:33",
-      "wallet_name": "Visa",
-      "total": "10",
-      "cattegory": "bf",
-      "id": 1
+      "id": 1,
+      "user_id": 1,
+      "wallet_id": 1,
+      "total": 10,
+      "category": "car",
+      "date": "",
+      "card": {
+        "id": 1,
+        "name": "visa",
+        "balance": 100
+      }
     },
     {
-      "user_id": 3,
-      "wallet_id": 3,
-      "time": "2023-10-2-17:44",
-      "wallet_name": "gg",
-      "total": "10",
-      "cattegory": "bf",
+      "user_id": 2,
+      "date": "2023-10-2-19:0",
+      "wallet_id": "1",
+      "total": "40",
+      "cattegory": "car",
+      "card": {
+        "name": "Visa",
+        "balance": "100"
+      },
       "id": 2
     }
   ]

@@ -24,9 +24,9 @@ export const postData = async (resource, body) => {
     }
     
 }
-export const editData = async (last_value, new_value) => {
+export const editData = async (resource, body) => {
     try {
-        const res = await axios.patch(last_value, new_value)
+        const res = await axios.patch(base_url + resource, body)
 
         return res
     } catch(e) {

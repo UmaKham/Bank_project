@@ -36,11 +36,6 @@ export function reload(arr, place) {
 
         place.append(box)
         box.append(h2, p)
-
-        box.ondblclick = () => {
-            localStorage.setItem('wallet', JSON.stringify(item))
-            location.assign('/pages/addTransaction/')
-        }
     }
 }
 
@@ -55,10 +50,10 @@ export function table_reload(arr, place) {
         let time = document.createElement("td");
 
         id.innerHTML = item.id;
-        card.innerHTML = item.wallet_name;
+        card.innerHTML = item.card.name;
         catelory.innerHTML = item.cattegory;
         sum.innerHTML = item.total;
-        time.innerHTML = item.time;
+        time.innerHTML = item.date;
 
         place.append(tr);
         tr.append(id, card, catelory, sum, time);
