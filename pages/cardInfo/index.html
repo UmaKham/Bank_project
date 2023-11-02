@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <title>Card Info</title>
+</head>
+<body>
+  
+  <main>
+    <div class="container">
+      <div class="card_box">
+
+        <div style="
+          background: url(../../public/img/card_bg.jpg);
+          background-repeat: no-repeat;
+          background-size: cover;"  class="card_item">
+          <div class="top_card">
+            <div class="img_icon">
+              <img src="../../public/img/wallet.png" width="30" height="30" alt="">
+            </div>
+            <span class="card_name">Uma Kham</span>
+          </div>
+          <span class="cash">10 000</span>
+          <span class="currency">RUB</span>
+        </div>
+
+        <div style="
+        background: url(../../public/img/card_bg2.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;" class="converter">
+          <h2 class="actual_currency">RUB</h2>
+          <select name="currency" id="currency">
+          </select>
+          <button>Convert</button>
+        </div>
+      </div>
+
+      <div class="chart_box">
+        <div class="nav_chart">
+          <span>Uma Kham unit chart</span>
+          <div class="chart_btnbox">
+            <button>Today</button>
+            <button class="active">Week</button>
+            <button>Month</button>
+            <button>Year</button>
+          </div>
+        </div>
+        <div class="chart"></div>
+      </div>
+    </div>
+  </main>
+
+  <script type="module" src="./script.js"></script>
+</body>
+</html>

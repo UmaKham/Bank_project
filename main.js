@@ -27,6 +27,7 @@ user_email_body.innerHTML = `${user.email}`
 getData('/wallets?user_id=' + user.id)
     .then(res => {
         reload(res.data, wallets)
+        
     })
 
 

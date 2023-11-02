@@ -41,6 +41,13 @@
       "surname": "ulmas@gmail.com",
       "password": "1234",
       "id": 6
+    },
+    {
+      "email": "Ulmas@gmail.com",
+      "name": "Ulmas",
+      "surname": "Khamrakulov",
+      "password": "1234",
+      "id": 7
     }
   ],
   "wallets": [
@@ -57,6 +64,20 @@
       "name": "Visa",
       "balance": "100",
       "id": 2
+    },
+    {
+      "user_id": 6,
+      "currency": "AED",
+      "name": "Ulmas",
+      "balance": "10000",
+      "id": 3
+    },
+    {
+      "user_id": 7,
+      "currency": "USD",
+      "name": "Uma Kham",
+      "balance": "100000",
+      "id": 4
     }
   ],
   "transactions": []
