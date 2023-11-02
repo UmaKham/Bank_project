@@ -60,7 +60,9 @@ export function table_reload(arr, place) {
     }
 }
 
-export function header_create(user) {
+export function header_create() {
+    let locale = location.pathname.split('/')[2] || "home"
+
     let header = document.createElement("header");
     let container = document.createElement('div')
     let nav = document.createElement("nav");
@@ -90,6 +92,22 @@ export function header_create(user) {
     nav.append(main_page, my_wallets, my_transactions);
     div.append(p, button);
     button.append(img);
+
+
+    switch (locale) {
+        case 'home':
+            main_page.classList.add('active_url')
+            break;
+        case 'my_wallets':
+            my_wallets.classList.add('active_url')
+            break;
+        case 'my_transactions':
+            my_transactions.classList.add('active_url')
+            break;
+    
+        default:
+            break;
+    }
 
     img.onclick = () => {
         let ask = confirm('Вы действительно хотите выйти?')
