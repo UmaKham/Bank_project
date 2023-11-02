@@ -71,6 +71,7 @@ export function header_create(user) {
     my_wallets.innerHTML = "Мои кошельки";
     my_wallets.href = "/pages/my_wallets/"
     my_transactions.innerHTML = "Мои транзакции";
+    my_transactions.href = "/pages/my_transactions/"
     img.src = "/public/img/log-out (1) 1.png";
     let user_local = JSON.parse(localStorage.getItem('user'))
     p.classList.add("user_email");

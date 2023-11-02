@@ -1,0 +1,13 @@
+.all_transaction {
+  width: 438px;
+  height: 56px;
+  border-radius: 10px;
+  background: #0047ff;
+  color: white;
+  margin-top: 44px;
+}
+.p_user_email {
+    color: blue;
+    padding: 0 0 20px 0;
+    font-weight: 700;
+}

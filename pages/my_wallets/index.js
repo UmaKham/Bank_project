@@ -17,8 +17,8 @@ getData('/wallets?user_id=' + user.id)
             reload(res.data, wallets)
         }
 )
+p_user_email.innerHTML = user.email
 
 btn_add_wallet.onclick = () =>{
     location.assign('/pages/addWallet/')
 }
-p_user_email.innerHTML = user.email

@@ -12,3 +12,8 @@ background: #0047FF;
 color: white;
 margin-top: 44px;
 }
+.p_user_email {
+    color: blue;
+    padding: 0 0 20px 0;
+    font-weight: 700;
+}
