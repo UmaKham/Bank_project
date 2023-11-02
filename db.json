@@ -41,7 +41,7 @@
       "user_id": 2,
       "currency": "USD",
       "name": "Visa",
-      "balance": "1000",
+      "balance": "100",
       "id": 1
     },
     {
@@ -55,14 +55,14 @@
       "user_id": 3,
       "currency": "RUB",
       "name": "gg",
-      "balance": "",
+      "balance": "100",
       "id": 3
     },
     {
       "user_id": 3,
       "currency": "AED",
       "name": "hhh",
-      "balance": "",
+      "balance": "100",
       "id": 4
     }
   ],
@@ -70,6 +70,7 @@
     {
       "user_id": 3,
       "wallet_id": 2,
+      "time": "2023-10-2-13:33",
       "wallet_name": "Visa",
       "total": "10",
       "cattegory": "bf",
@@ -77,19 +78,12 @@
     },
     {
       "user_id": 3,
-      "wallet_id": 2,
-      "wallet_name": "Visa",
+      "wallet_id": 3,
+      "time": "2023-10-2-17:44",
+      "wallet_name": "gg",
       "total": "10",
       "cattegory": "bf",
       "id": 2
-    },
-    {
-      "user_id": 3,
-      "wallet_id": 2,
-      "wallet_name": "Visa",
-      "total": "100",
-      "cattegory": "bf",
-      "id": 3
     }
   ]
 }

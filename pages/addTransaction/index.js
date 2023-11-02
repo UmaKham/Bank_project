@@ -39,7 +39,8 @@ form.onsubmit = (e) => {
 
     let transaction = {
         user_id: user?.id,
-        wallet_id: wallet.id
+        wallet_id: wallet.id,
+        time: new Date().getFullYear() + "-" +new Date().getMonth() + "-" + new Date().getDate() + "-" + new Date().getHours() + ":" + new Date().getMinutes()
     }
 
     let fm = new FormData(form)
@@ -51,11 +52,14 @@ form.onsubmit = (e) => {
 
     getData('/wallets?user_id=' + user.id + '&name=' + select.value )
         .then(res=> {
+            
             let [wallet_info] = res.data
+
             if(inp_total.value>wallet_info.balance){
                 alert('error')
                 return
             }
+            
                 if(res.status ==200 || res.status ==201){
                     // editData( )
 
@@ -63,7 +67,7 @@ form.onsubmit = (e) => {
                     .then(res => {
                         if (res.status === 200 || res.status === 201) {
                             location.assign('/pages/my_transactons/')
-                            alert('good')
+
                         } else {
                             alert('Something went wrong please try again')
                         }
