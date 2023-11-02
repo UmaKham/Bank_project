@@ -5,17 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Transaction</title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="../../style.scss">
 </head>
 <body>
     
     <div class="container">
-        <form class="box">
+        <form name="addTransacton" class="box">
             <p class="title">Добавить транзакцию</p>
 
             <div class="inputs">
-                <input type="text" placeholder="Из кошелька">
-                <input type="number" placeholder="Сумма">
-                <input type="text" placeholder="Категория">
+                <select name="wallet_id" id="wallets">
+                </select>
+                <input name="total" type="number"  id="total"
+                placeholder="Сумма">
+                <input name="cattegory" type="text" placeholder="Категория">
             </div>
 
 
@@ -24,6 +27,7 @@
         </form>
     </div>
 
+    <script type="module" src="./index.js"></script>
 
 </body>
 </html>
