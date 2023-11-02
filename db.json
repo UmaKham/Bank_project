@@ -64,6 +64,20 @@
       "name": "hhh",
       "balance": "100",
       "id": 4
+    },
+    {
+      "user_id": 4,
+      "currency": "RUB",
+      "name": "",
+      "balance": "",
+      "id": 5
+    },
+    {
+      "user_id": 4,
+      "currency": "RUB",
+      "name": "samir",
+      "balance": "2000",
+      "id": 6
     }
   ],
   "transactions": [

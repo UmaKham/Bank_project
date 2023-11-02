@@ -27,7 +27,11 @@ btn_add_wallet.onclick = () =>{
 
         
 
-
+wallets.addEventListener('dblclick', () => {
+    location.assign('/pages/wallet/?data=' + JSON.stringify(user));
+});
 
 
 p_user_email.innerHTML = user.email
+
+
