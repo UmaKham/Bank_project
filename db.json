@@ -57,6 +57,13 @@
       "name": "Visa",
       "balance": "100",
       "id": 2
+    },
+    {
+      "user_id": 6,
+      "currency": "RUB",
+      "name": "Visa",
+      "balance": "1000",
+      "id": 3
     }
   ],
   "transactions": []
