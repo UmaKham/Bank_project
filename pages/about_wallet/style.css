@@ -1,0 +1,47 @@
+.box_left{
+    background-color: rgb(80, 40, 224);
+    border-radius: 14px;
+    width: 500px;
+    height: 300px;
+    color: white;
+    padding: 40px;
+}
+
+.left_top{
+    display: flex;
+    align-items: center;
+}
+
+.box_left h1{
+    color: white;
+    margin-bottom: 35px;
+}
+
+.main_box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.box_right{
+    background-color: rgb(40, 141, 224);
+    border-radius: 14px;
+    width: 500px;
+    height: 300px;
+    color: white;
+    padding: 40px;
+}
+
+.box_right button{
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 35px;
+    margin-top: 20px;
+}
+
+.box_right h1{
+    color: white;
+    margin-bottom: 35px;
+}

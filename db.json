@@ -40,8 +40,8 @@
     {
       "user_id": 2,
       "currency": "USD",
-      "name": "Mastercard",
-      "balance": "1000",
+      "name": "Visa",
+      "balance": "100",
       "id": 1
     },
     {
@@ -50,7 +50,40 @@
       "name": "Visa",
       "balance": "100",
       "id": 2
+    },
+    {
+      "user_id": 3,
+      "currency": "RUB",
+      "name": "gg",
+      "balance": "100",
+      "id": 3
+    },
+    {
+      "user_id": 3,
+      "currency": "AED",
+      "name": "hhh",
+      "balance": "100",
+      "id": 4
     }
   ],
-  "transactions": []
+  "transactions": [
+    {
+      "user_id": 3,
+      "wallet_id": 2,
+      "time": "2023-10-2-13:33",
+      "wallet_name": "Visa",
+      "total": "10",
+      "cattegory": "bf",
+      "id": 1
+    },
+    {
+      "user_id": 3,
+      "wallet_id": 3,
+      "time": "2023-10-2-17:44",
+      "wallet_name": "gg",
+      "total": "10",
+      "cattegory": "bf",
+      "id": 2
+    }
+  ]
 }

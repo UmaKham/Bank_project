@@ -3,6 +3,13 @@ export function reload(arr, place) {
 
     let wallet_color = 1
 
+    if(arr.length == 0){
+        let p = document.createElement('p')
+        p.innerHTML = 'NO WALLETS'
+        p.style.color = 'red'
+        place.append(p)
+    }
+
     for (let item of arr) {
         let box = document.createElement('div')
         let h2 = document.createElement('h2')
@@ -29,6 +36,11 @@ export function reload(arr, place) {
 
         place.append(box)
         box.append(h2, p)
+
+        box.ondblclick = () => {
+            localStorage.setItem('wallet', JSON.stringify(item))
+            location.assign('/pages/addTransaction/')
+        }
     }
 }
 
@@ -43,12 +55,12 @@ export function table_reload(arr, place) {
         let time = document.createElement("td");
 
         id.innerHTML = item.id;
-        card.innerHTML = item.card;
-        catelory.innerHTML = item.catelories;
-        sum.innerHTML = item.sum;
+        card.innerHTML = item.wallet_name;
+        catelory.innerHTML = item.cattegory;
+        sum.innerHTML = item.total;
         time.innerHTML = item.time;
 
-        tBody.append(tr);
+        place.append(tr);
         tr.append(id, card, catelory, sum, time);
     }
 }
@@ -71,6 +83,7 @@ export function header_create(user) {
     my_wallets.innerHTML = "Мои кошельки";
     my_wallets.href = "/pages/my_wallets/"
     my_transactions.innerHTML = "Мои транзакции";
+    my_transactions.href = "/pages/my_transactions/"
     img.src = "./img/log-out (1) 1.png";
     let user_local = JSON.parse(localStorage.getItem('user'))
     p.classList.add("user_email");
