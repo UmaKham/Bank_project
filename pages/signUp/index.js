@@ -1,5 +1,5 @@
+import axios from "axios";
 import { getData, postData } from "../../modules/helpers";
-
 let form = document.forms.signup;
 
 form.onsubmit = (e) => {
@@ -9,10 +9,6 @@ form.onsubmit = (e) => {
 
   let fm = new FormData(form);
 
-  fm.forEach((value, key) => {
-    user[key] = value;
-  });
-
   getData("/users?email=" + user.email).then((res) => {
     if (res.status !== 200 && res.status !== 201) return;
     if (res.data.length > 0) {
@@ -20,11 +16,8 @@ form.onsubmit = (e) => {
       return;
     }
 
-    postData("/users", user)
-    .then((res) => {
+    postData("/users", user).then((res) => {
       if (res.status === 200 || res.status === 201) {
-        delete user.password;
-        localStorage.setItem("user", JSON.stringify(user));
         location.assign("/pages/login/");
       }
     });
