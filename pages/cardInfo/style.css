@@ -153,3 +153,37 @@ main .container{
   cursor: pointer;
   box-shadow: 0 0 15px black;
 }
+
+.box, .card_item_back{
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+.card_item, .card_item_back{
+    transition: transform .2s;
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.card_item_back{
+  width: 400px;
+  height: 240px;
+  position: absolute;
+  border-radius: 20px;
+  transform: rotateY(180deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backface-visibility: hidden;
+  background: url(/public/img/card_bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  box-shadow: 0 20px 30px black;
+}
+
+.card_back_id{
+  font-size: 50px;
+  font-weight: bold;
+  color: white;
+}

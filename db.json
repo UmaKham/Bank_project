@@ -78,6 +78,13 @@
       "name": "hhh",
       "balance": "100",
       "id": 4
+    },
+    {
+      "user_id": 6,
+      "currency": "USD",
+      "name": "VISA",
+      "balance": "100000",
+      "id": 5
     }
   ],
   "transactions": [
