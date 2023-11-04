@@ -53,5 +53,33 @@ export const getSymbols = async () => {
     console.log(e);
   }
 };
+export function convert(from, to, sum) {
+  const res = JSON.parse(localStorage.getItem("success"));
 
+  if (res) {
+    return res;
+  }
 
+  try {
+    var myHeaders = new Headers();
+    myHeaders.append("apikey", "I2fJ69M5YblR5dAxTQC9hPnPj7W6VGrI");
+
+    var requestOptions = {
+      method: "GET",
+      redirect: "follow",
+      headers: myHeaders,
+    };
+
+    fetch(
+      `https://api.apilayer.com/fixer/convert?to=${to}&from=${from}&amount=${sum}`,
+      requestOptions
+    )
+      .then((response) => response.text())
+      .then((result) =>
+        localStorage.setItem("success", JSON.stringify(JSON.parse(result)))
+      )
+      .catch((error) => console.log("error", error));
+  } catch (e) {
+    console.log(e);
+  }
+}

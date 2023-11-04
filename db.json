@@ -54,9 +54,20 @@
     {
       "user_id": 6,
       "currency": "RUB",
-      "name": "MasterCard",
-      "balance": 890000,
-      "id": 2
+      "name": "Visa",
+      "balance": 889,
+      "id": 2,
+      "convertWallet": {
+        "newSum": 0.010154,
+        "newCurrency": "EUR",
+        "wallet": {
+          "user_id": 6,
+          "currency": "RUB",
+          "name": "Visa",
+          "balance": "1000",
+          "id": 2
+        }
+      }
     }
   ],
   "transactions": [
