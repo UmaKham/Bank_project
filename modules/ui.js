@@ -55,12 +55,12 @@ export function table_reload(arr, place) {
 
         id.innerHTML = item.id;
         card.innerHTML = item.card.name;
-        catelory.innerHTML = item.cattegory;
+        category.innerHTML = item.cattegory;
         sum.innerHTML = item.total;
         time.innerHTML = item.date;
 
         place.append(tr);
-        tr.append(id, card, catelory, sum, time);
+        tr.append(id, card, category, sum, time);
     }
 }
 

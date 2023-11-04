@@ -55,7 +55,7 @@
       "user_id": 6,
       "currency": "RUB",
       "name": "MasterCard",
-      "balance": "1000000",
+      "balance": 890000,
       "id": 2
     },
     {
@@ -76,9 +76,46 @@
       "user_id": 6,
       "currency": "RUB",
       "name": "Visa",
-      "balance": "1000",
+      "balance": 900,
       "id": 5
     }
   ],
-  "transactions": []
+  "transactions": [
+    {
+      "user_id": 6,
+      "date": "2023-10-4-10:46",
+      "wallet_id": "5",
+      "total": "100",
+      "cattegory": "car",
+      "card": {
+        "name": "Visa",
+        "balance": "1000"
+      },
+      "id": 1
+    },
+    {
+      "user_id": 6,
+      "date": "2023-10-4-10:48",
+      "wallet_id": "2",
+      "total": "10000",
+      "cattegory": "food",
+      "card": {
+        "name": "MasterCard",
+        "balance": "1000000"
+      },
+      "id": 2
+    },
+    {
+      "user_id": 6,
+      "date": "2023-10-4-10:48",
+      "wallet_id": "2",
+      "total": "100000",
+      "cattegory": "rent",
+      "card": {
+        "name": "MasterCard",
+        "balance": 990000
+      },
+      "id": 3
+    }
+  ]
 }

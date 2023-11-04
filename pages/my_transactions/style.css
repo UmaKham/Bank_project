@@ -8,5 +8,12 @@
   border-radius: 10px;
   background: #0047ff;
   color: white;
-  margin-top: 44px;
+}
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.main_box1 {
+    margin: 0;
 }
