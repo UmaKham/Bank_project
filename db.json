@@ -34,6 +34,13 @@
       "surname": "Adams",
       "password": "9999",
       "id": 5
+    },
+    {
+      "email": "tursunovmunis141@gmail.com",
+      "name": "Munis",
+      "surname": "Tursunov",
+      "password": "9669",
+      "id": 6
     }
   ],
   "wallets": [
@@ -64,8 +71,14 @@
       "name": "hhh",
       "balance": "100",
       "id": 4
+    },
+    {
+      "user_id": 6,
+      "currency": "RUB",
+      "name": "Visa",
+      "balance": "1000",
+      "id": 5
     }
   ],
-  "transactions": [
-  ]
+  "transactions": []
 }

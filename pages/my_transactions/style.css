@@ -1,4 +1,12 @@
-.p_email{
-    color: blue;
-    margin-bottom: 35px;
+.p_email {
+  color: blue;
+  margin-bottom: 35px;
+}
+.add_transaction {
+  width: 438px;
+  height: 56px;
+  border-radius: 10px;
+  background: #0047ff;
+  color: white;
+  margin-top: 44px;
 }
