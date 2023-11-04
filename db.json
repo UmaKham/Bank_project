@@ -41,7 +41,7 @@
       "user_id": 2,
       "currency": "UZS",
       "name": "Visa",
-      "balance": 729222.17046,
+      "balance": 569222.17046,
       "id": 1
     },
     {
@@ -73,7 +73,7 @@
       "wallet_id": 1,
       "total": 10,
       "category": "car",
-      "date": "",
+      "date": "2023-10-03",
       "card": {
         "id": 1,
         "name": "visa",
@@ -82,7 +82,7 @@
     },
     {
       "user_id": 2,
-      "date": "2023-10-2-19:0",
+      "date": "2023-10-02",
       "wallet_id": "1",
       "total": "40",
       "cattegory": "car",
@@ -127,6 +127,30 @@
         "balance": "100"
       },
       "id": 5
+    },
+    {
+      "user_id": 2,
+      "date": "2023-10-4-19:33",
+      "wallet_id": "1",
+      "total": "40000",
+      "cattegory": "car",
+      "card": {
+        "name": "Visa",
+        "balance": 729222.17046
+      },
+      "id": 6
+    },
+    {
+      "user_id": 2,
+      "date": "2023-10-4-19:34",
+      "wallet_id": "1",
+      "total": "120000",
+      "cattegory": "food",
+      "card": {
+        "name": "Visa",
+        "balance": 689222.17046
+      },
+      "id": 7
     }
   ]
 }
