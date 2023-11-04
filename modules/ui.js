@@ -42,10 +42,12 @@ export function reload(arr, place) {
         box.onclick = () => {
             getData('/wallets?id=' + item.id)
                 .then(res=> {
-                    localStorage.setItem('wallet', res.data)
-                    
+                    let [wallet_info] = res.data
+                    localStorage.setItem('wallet', JSON.stringify(wallet_info))
+                    console.log(wallet_info);
+                    location.assign('/pages/about_wallet/')
                 })
-            location.assign('/pages/about_wallet/')
+            
         }
     }
 }

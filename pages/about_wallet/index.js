@@ -37,7 +37,9 @@ back.onclick = () => {
 
 
 let wallet = JSON.parse(localStorage.getItem('wallet'))
-console.log(wallet.name);
+console.log(wallet);
+
+
 
 h1.innerHTML = wallet.name
 h3.innerHTML = `${wallet.balance}${wallet.currency}`
@@ -52,7 +54,7 @@ getSymbols()
     })
 
 
-date_btns.forEach((btn, id)=> {
+date_btns.forEach((btn)=> {
     btn.onclick = () => {
         date_btns.forEach(btn=>{
             if(btn.classList.contains('selected_btn')){
