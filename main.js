@@ -27,6 +27,5 @@ all_wallets.onclick = () => {
 };
 
 getData("/transactions?user_id=" + user.id).then((res) => {
-  console.log(res.data);
   table_reload(res.data, tbody);
 });

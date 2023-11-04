@@ -1,6 +1,5 @@
 import { header_create } from "../../modules/ui";
 import { reload } from "../../modules/ui";
-import axios from 'axios'
 import { getData } from '../../modules/helpers';
 
 let user = JSON.parse(localStorage.getItem('user'))
