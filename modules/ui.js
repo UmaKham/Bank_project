@@ -1,3 +1,5 @@
+import { getData } from "./helpers";
+
 export function reload(arr, place) {
     place.innerHTML = "";
 
@@ -36,6 +38,17 @@ export function reload(arr, place) {
 
         place.append(box)
         box.append(h2, p)
+
+        box.onclick = () => {
+            getData('/wallets?id=' + item.id)
+                .then(res=> {
+                    let [wallet_info] = res.data
+                    localStorage.setItem('wallet', JSON.stringify(wallet_info))
+                    console.log(wallet_info);
+                    location.assign('/pages/about_wallet/')
+                })
+            
+        }
     }
 }
 
