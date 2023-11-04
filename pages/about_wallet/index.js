@@ -62,25 +62,20 @@ form.onsubmit = (e) => {
   if (!success.success) return;
 
   convertWallet.newSum = success.result;
-
-  editData("/wallets/" + convertWallet.wallet.id, {
+  if (!Boolean((convertWallet.newSum = success.result))) return;
+  
+  delete convertWallet.wallet;
+  editData("/wallets/" + id, {
     balance: total,
     convertWallet,
   }).then((res) => {
     if (res.status !== 200 && res.status !== 201) return;
     console.log(res.data);
-    //   if (!Boolean((convertWallet.newSum = success.result))) return;
-    //   editData("/wallets/" + convertWallet.wallet.id, convertWallet).then(
-    //     (res) => {
-    //       if (res.status !== 200 && res.status === 201) return;
-    //       if (Boolean(delete res.data.name)) {
-    //         getData("/wallets?id=" + id).then((res) => {
-    //           reload_wallet(res.data, walletBlock, true);
-    //           form.reset();
-    //           alert("success");
-    //         });
-    //       }
-    //     }
-    //   );
+
+    getData("/wallets?id=" + id).then((res) => {
+      reload_wallet(res.data, walletBlock, true);
+      form.reset();
+      alert("success");
+    });
   });
 };

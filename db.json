@@ -55,18 +55,11 @@
       "user_id": 6,
       "currency": "RUB",
       "name": "Visa",
-      "balance": 889,
+      "balance": 334,
       "id": 2,
       "convertWallet": {
         "newSum": 0.010154,
-        "newCurrency": "EUR",
-        "wallet": {
-          "user_id": 6,
-          "currency": "RUB",
-          "name": "Visa",
-          "balance": "1000",
-          "id": 2
-        }
+        "newCurrency": "EUR"
       }
     }
   ],
