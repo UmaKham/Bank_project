@@ -53,3 +53,5 @@ export const getSymbols = async () => {
     console.log(e);
   }
 };
+
+

@@ -1,13 +1,15 @@
-export function reload_wallet(arr, place) {
+export function reload_wallet(arr, place, plite) {
   place.innerHTML = "";
   for (let item of arr) {
-    place.innerHTML += `
+    if (plite) {
+      place.innerHTML += `
         <h2 class="walletName">${item.name}</h2>
         <div>
          <p class="balance">Balance: ${item.balance} <b>${item.currency}</b> </p>
         <p class="currency">Currency: <b>${item.currency}</b></p>
         </div>
         `;
+    }
   }
 }
 

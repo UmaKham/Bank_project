@@ -57,27 +57,6 @@
       "name": "MasterCard",
       "balance": 890000,
       "id": 2
-    },
-    {
-      "user_id": 3,
-      "currency": "RUB",
-      "name": "gg",
-      "balance": "100",
-      "id": 3
-    },
-    {
-      "user_id": 3,
-      "currency": "AED",
-      "name": "hhh",
-      "balance": "100",
-      "id": 4
-    },
-    {
-      "user_id": 6,
-      "currency": "RUB",
-      "name": "Visa",
-      "balance": 900,
-      "id": 5
     }
   ],
   "transactions": [

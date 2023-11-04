@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="../../style.scss" />
     <script async src="/modules/guardian.js"></script>
   </head>
-
   <body>
     <section class="dashBoard">
       <div class="dash_top">
@@ -27,7 +26,15 @@
     <div class="container aboutWallet">
       <div class="wallet"></div>
       <b></b>
-      <div class="wallet_activity"></div>
+      <div class="wallet_activity">
+        <form name="convert">
+          <h4 class="wallet_currency">sadaas</h4>
+          <input name="sum" id="sum" type="number" placeholder="Сколько?" />
+          <p>||</p>
+          <input name="newCurrency" type="text" placeholder="Валюта?" />
+          <button>Convert</button>
+        </form>
+      </div>
     </div>
     <script type="module" src="./index.js"></script>
   </body>
