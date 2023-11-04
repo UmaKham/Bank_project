@@ -40,14 +40,7 @@ export function reload(arr, place) {
         box.append(h2, p)
 
         box.onclick = () => {
-            getData('/wallets?id=' + item.id)
-                .then(res=> {
-                    let [wallet_info] = res.data
-                    localStorage.setItem('wallet', JSON.stringify(wallet_info))
-                    console.log(wallet_info);
-                    location.assign('/pages/about_wallet/')
-                })
-            
+            location.assign('/pages/about_wallet/?id=' + item.id)            
         }
     }
 }

@@ -39,9 +39,9 @@
   "wallets": [
     {
       "user_id": 2,
-      "currency": "USD",
+      "currency": "UZS",
       "name": "Visa",
-      "balance": 60,
+      "balance": 729222.17046,
       "id": 1
     },
     {
