@@ -3,8 +3,6 @@ import { user } from "./modules/user.js";
 import { reload } from "./modules/ui.js";
 import { getData } from "./modules/helpers";
 
-import { table_reload } from "./modules/ui.js";
-
 header_create();
 
 let h1 = document.querySelector("h1");

@@ -34,20 +34,6 @@
       "surname": "Adams",
       "password": "9999",
       "id": 5
-    },
-    {
-      "email": "tursunovmunis141@gmail.com",
-      "name": "Munis",
-      "surname": "Tursunov",
-      "password": "9669",
-      "id": 6
-    },
-    {
-      "email": "tursunovmunis34@gmail.com",
-      "name": "Munis",
-      "surname": "Tursunov",
-      "password": "9669",
-      "id": 7
     }
   ],
   "wallets": [
@@ -81,30 +67,5 @@
     }
   ],
   "transactions": [
-    {
-      "id": 1,
-      "user_id": 1,
-      "wallet_id": 1,
-      "total": 10,
-      "category": "car",
-      "date": "",
-      "card": {
-        "id": 1,
-        "name": "visa",
-        "balance": 100
-      }
-    },
-    {
-      "user_id": 2,
-      "date": "2023-10-2-19:0",
-      "wallet_id": "1",
-      "total": "40",
-      "cattegory": "car",
-      "card": {
-        "name": "Visa",
-        "balance": "100"
-      },
-      "id": 2
-    }
   ]
 }
