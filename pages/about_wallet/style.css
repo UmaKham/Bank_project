@@ -139,14 +139,14 @@ b {
 }
 
 /*works janky on mobile :<*/
-.container {
+.container1 {
   position: relative;
   width: 190px;
   height: 254px;
   transition: 200ms;
 }
 
-.container:active {
+.container1:active {
   width: 180px;
   height: 245px;
 }
@@ -222,7 +222,7 @@ b {
   filter: brightness(1.1);
 }
 
-.container:hover #card::before {
+.containe1r:hover #card::before {
   transition: 200ms;
   content: "";
   opacity: 80%;
