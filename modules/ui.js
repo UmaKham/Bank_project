@@ -3,6 +3,13 @@ export function reload(arr, place) {
 
     let wallet_color = 1
 
+    if(arr.length == 0){
+        let p = document.createElement('p')
+        p.innerHTML = 'NO WALLETS'
+        p.style.color = 'red'
+        place.append(p)
+    }
+
     for (let item of arr) {
         let box = document.createElement('div')
         let h2 = document.createElement('h2')
@@ -47,17 +54,19 @@ export function table_reload(arr, place) {
         let time = document.createElement("td");
 
         id.innerHTML = item.id;
-        card.innerHTML = item.wallet;
-        category.innerHTML = item.category;
-        sum.innerHTML = item.sum;
-        time.innerHTML = item.time;
+        card.innerHTML = item.card.name;
+        catelory.innerHTML = item.cattegory;
+        sum.innerHTML = item.total;
+        time.innerHTML = item.date;
 
         place.append(tr);
-        tr.append(id, card, category, sum, time);
+        tr.append(id, card, catelory, sum, time);
     }
 }
 
-export function header_create(user) {
+export function header_create() {
+    let locale = location.pathname.split('/')[2] || "home"
+
     let header = document.createElement("header");
     let container = document.createElement('div')
     let nav = document.createElement("nav");
@@ -76,7 +85,7 @@ export function header_create(user) {
     my_wallets.href = "/pages/my_wallets/"
     my_transactions.innerHTML = "Мои транзакции";
     my_transactions.href = "/pages/my_transactions/"
-    img.src = "/public/img/log-out (1) 1.png";
+    img.src = "./img/log-out (1) 1.png";
     let user_local = JSON.parse(localStorage.getItem('user'))
     p.classList.add("user_email");
     p.innerHTML = user_local.email
@@ -87,6 +96,22 @@ export function header_create(user) {
     nav.append(main_page, my_wallets, my_transactions);
     div.append(p, button);
     button.append(img);
+
+
+    switch (locale) {
+        case 'home':
+            main_page.classList.add('active_url')
+            break;
+        case 'my_wallets':
+            my_wallets.classList.add('active_url')
+            break;
+        case 'my_transactions':
+            my_transactions.classList.add('active_url')
+            break;
+    
+        default:
+            break;
+    }
 
     img.onclick = () => {
         let ask = confirm('Вы действительно хотите выйти?')

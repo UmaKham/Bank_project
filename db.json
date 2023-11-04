@@ -52,10 +52,10 @@
   ],
   "wallets": [
     {
-      "user_id": 6,
-      "currency": "UZS",
+      "user_id": 2,
+      "currency": "USD",
       "name": "Visa",
-      "balance": "1000000",
+      "balance": 60,
       "id": 1
     },
     {
@@ -66,14 +66,45 @@
       "id": 2
     },
     {
-      "user_id": 6,
-      "currency": "UZS",
-      "name": "Humo",
-      "balance": "1000000",
+      "user_id": 3,
+      "currency": "RUB",
+      "name": "gg",
+      "balance": "100",
       "id": 3
+    },
+    {
+      "user_id": 3,
+      "currency": "AED",
+      "name": "hhh",
+      "balance": "100",
+      "id": 4
     }
   ],
   "transactions": [
-
+    {
+      "id": 1,
+      "user_id": 1,
+      "wallet_id": 1,
+      "total": 10,
+      "category": "car",
+      "date": "",
+      "card": {
+        "id": 1,
+        "name": "visa",
+        "balance": 100
+      }
+    },
+    {
+      "user_id": 2,
+      "date": "2023-10-2-19:0",
+      "wallet_id": "1",
+      "total": "40",
+      "cattegory": "car",
+      "card": {
+        "name": "Visa",
+        "balance": "100"
+      },
+      "id": 2
+    }
   ]
 }

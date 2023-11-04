@@ -4,27 +4,30 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Transaction</title>
-    <link rel="stylesheet" href="./style.css" />
-    <script async src="/modules/guardian.js"></script>
-  </head>
-  <body>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="../../style.scss">
+</head>
+<body>
+    
     <div class="container">
-      <form class="box" name="add_trans">
-        <p class="title">Добавить транзакцию</p>
-        <div class="inputs">
-          <select id="own_wallets" type="text" name="wallet" placeholder="Из кошелька"></select>
-          <input type="number" id="sum" name="sum" placeholder="Сумма" />
-          <select id="spendings" type="text" name="category" placeholder="Категория">
-            <option value="Transport">Транспорт</option>
-            <option value="Food">Еда</option>
-            <option value="Accomodation">Недвижимость</option>
-            <option value="Credit">Кредит</option>
-            <option value="Rent">Аренда</option>
-          </select>
-        </div>
-        <button class="btn"><p>Добавить</p></button>
-      </form>
+        <form name="addTransacton" class="box">
+            <p class="title">Добавить транзакцию</p>
+
+            <div class="inputs">
+                <select name="wallet_id" id="wallets">
+                </select>
+                <input name="total" type="number"  id="total"
+                placeholder="Сумма">
+                <input name="cattegory" type="text" placeholder="Категория">
+            </div>
+
+
+            <button class="btn"><p>Добавить</p></button>
+
+        </form>
     </div>
+
     <script type="module" src="./index.js"></script>
-  </body>
+
+</body>
 </html>
