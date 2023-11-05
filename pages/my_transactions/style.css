@@ -3,6 +3,7 @@
     margin-bottom: 35px;
 }
 
+<<<<<<< HEAD
 .btn {
     font-size: 17px;
     padding: 0.5em 2em;
@@ -25,3 +26,13 @@
    table {
     margin-top: 50px;
    }
+=======
+.main_box button{
+    width: 200px;
+    height: 50px;
+    background-color: blue;
+    color: white;
+    border-radius: 14px;
+    margin-bottom: 40px;c
+}
+>>>>>>> 6fcf2e1d090d003626aaeb4b25b2d6d687029c31

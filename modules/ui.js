@@ -1,3 +1,5 @@
+import { getData } from "./helpers";
+
 export function reload(arr, place) {
     place.innerHTML = "";
 
@@ -36,6 +38,10 @@ export function reload(arr, place) {
 
         place.append(box)
         box.append(h2, p)
+
+        box.onclick = () => {
+            location.assign('/pages/about_wallet/?id=' + item.id)            
+        }
     }
 }
 

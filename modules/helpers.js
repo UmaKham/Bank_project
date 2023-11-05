@@ -57,3 +57,16 @@ export const getSymbols = async () => {
         console.log(e);
     }
 }
+export const convertCurrency = async (from, to, amount) => {
+    try {
+        const res = await axios.get(`https://api.apilayer.com/fixer/convert?to=${to}&from=${from}&amount=${amount}`, {
+            headers: {
+                apikey: import.meta.env.VITE_API_KEY
+            }
+        })
+        
+        return res
+    } catch (e) {
+        console.log(e);
+    }
+}

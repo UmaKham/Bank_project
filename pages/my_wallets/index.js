@@ -1,6 +1,5 @@
 import { header_create } from "../../modules/ui";
 import { reload } from "../../modules/ui";
-import axios from 'axios'
 import { getData } from '../../modules/helpers';
 
 let user = JSON.parse(localStorage.getItem('user'))
@@ -25,6 +24,7 @@ btn_add_wallet.onclick = () =>{
     location.assign('/pages/addWallet/')
 }
 
+<<<<<<< HEAD
         
 
 wallets.addEventListener('dblclick', () => {
@@ -45,6 +45,8 @@ wallets.addEventListener('dblclick', () => {
 
 
 
+=======
+>>>>>>> 6fcf2e1d090d003626aaeb4b25b2d6d687029c31
 p_user_email.innerHTML = user.email
 
 
