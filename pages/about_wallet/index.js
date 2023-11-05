@@ -91,3 +91,28 @@ date_btns.forEach((btn)=> {
 })
 
 date_btns_first.classList.add('selected_btn')
+
+
+
+let all_wallets = document.querySelector('.all_wallets')
+let wallets = document.querySelector('.wallets')
+let tbody = document.querySelector('tbody')
+
+
+getData('/wallets?user_id=' + user.id)
+    .then(res => {
+        reload(res.data, wallets)
+    })
+
+
+all_wallets.onclick = () => {
+    location.assign('/pages/my_wallets/')
+}
+
+
+
+getData('/transactions?user_id=' + user.id)
+    .then(res => {
+        console.log(res.data);
+        table_reload(res.data, tbody)
+    })
